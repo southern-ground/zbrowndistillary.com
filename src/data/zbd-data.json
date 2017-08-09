@@ -1,0 +1,37 @@
+{
+  "longSiteTitle": "Z Brown Distillary",
+  "canonicalUrl": "http://zbrowndistillary.com",
+  "cdn": {
+    "prod": "http://zbrowndistillery.com.s3-website-us-east-1.amazonaws.com",
+    "stage": "http://stage.zbrowndistillery.com.s3-website-us-east-1.amazonaws.com"
+  },
+  "sections": {
+    "tagline":{
+      "copy": "Georgia Born, American Made"
+    },
+    "description": {
+      "img": "img/zac.png",
+      "copy": "<p>Z. Brown Distillary is tucked into the foothills of the Appalachian Mountains and founded upon a deep-rooted respect for the long-standing, pre-prohibition traditions of making spirits in North Georgia and Appalachia. Z. Brown Distillary combinds history, tradition and culture to create a truly American-made whiskey. For GRAMMY award-winning musician Zac Brown, of Zac Brown Band, te distillery is a return to his hometown.</p>"
+    },
+    "footer": {
+      "social": {
+        "headline": "Social"
+      },
+      "location": {
+        "headline": "Location",
+        "address": "<address>2148 Town Creek Church Road<br />Dahlongega, GA 30533</address>"
+      }
+    }
+  },
+  "social": {
+    "socialMediaImage": "http://tbd",
+    "platformUrls": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "twitter": "https://twitter.com"
+    }
+  },
+  "tracking": {
+    "googleUA": "UA-XXXXXXXX-XX"
+  }
+}

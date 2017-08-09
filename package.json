@@ -1,0 +1,62 @@
+{
+  "name": "zbrowndistillary.com",
+  "version": "1.0.0",
+  "description": "Initial splash page for the distillary.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist && mkdir ./dist && mkdir ./dist/js && mkdir ./dist/js/vendor && mkdir ./dist/css/ && mkdir ./dist/css/vendor && mkdir ./dist/css/vendor/icon-font && mkdir ./dist/img",
+    "bootstrap": "cp ./node_modules/bootstrap/dist/css/bootstrap.min.css ./dist/css/vendor/",
+    "normalize": "cp ./node_modules/normalize.css/normalize.css ./dist/css/vendor/",
+    "underscore": "cp ./node_modules/underscore/underscore-min.js ./dist/js/vendor/",
+    "jquery": "cp ./node_modules/jquery/dist/jquery.min.js ./dist/js/vendor/",
+    "externals": "npm run clean && npm run bootstrap && npm run normalize && npm run underscore && npm run jquery",
+    "start": "npm run externals && gulp --env=dev",
+    "build": "npm run externals && gulp build",
+    "build:stage": "npm run externals && gulp build --env=stage",
+    "build:prod": "npm run externals && gulp build --env=prod"
+  },
+  "author": "ferris",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "git-rev-sync": "^1.9.1",
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-print": "^2.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.2",
+    "run-sequence": "^1.2.2",
+    "yargs": "^8.0.1"
+  },
+  "config": {
+    "directories": {
+      "dist": "./dist",
+      "src": "./src"
+    },
+    "siteData": "./src/data/zbd-data.json",
+    "servers": {
+      "dev": {
+        "name": "dev",
+        "assetURL": "./"
+      },
+      "stage": {
+        "name": "stage",
+        "assetURL": "./"
+      },
+      "prod": {
+        "name": "prod",
+        "assetURL": "./"
+      }
+    }
+  }
+}

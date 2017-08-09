@@ -1,0 +1,26 @@
+@import "_shared";
+
+html {
+  body {
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 100%;
+      z-index: 10;
+      nav.headerNav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-transition: background-color 2s, padding-bottom 2s; /* Safari */
+        transition: background-color 2s, padding-bottom 2s;
+      }
+    }
+  }
+}

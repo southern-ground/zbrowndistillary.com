@@ -1,0 +1,98 @@
+@import "_shared";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    color: $ink;
+    background-color: $canvas;
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/barrel-background.jpg);
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &.no-scroll {
+      overflow: hidden;
+    }
+    &.below-the-fold {
+      // Whatever needs to change under the fold.
+    }
+    div#content {
+      border: 1px solid white;
+      margin: 40px auto;
+      position: relative;
+      width: 100%;
+      max-width: 1024px;
+      section {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        &.header {
+          .logo {
+            padding: 40px 0 0;
+            width: 430px;
+            height: auto;
+            margin: 0 0 500px;
+          }
+        }
+        &.tagline{
+          border-top: 1px solid white;
+          h1{
+            color: $orange;
+          }
+        }
+        &.description {
+          background-color: rgba(5,7,7,0.95);
+          border-top: 1px solid white;
+          flex-direction: row;
+          p {
+            padding: 40px;
+          }
+        }
+      }
+    }
+    div#overlay {
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      z-index: 100;
+      #overlayContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      a.overlay__close {
+        text-indent: -10000px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        @include media-tablet-portrait {
+          top: 40px;
+          left: auto;
+        }
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url(../img/close-x.svg);
+      }
+    }
+  }
+}
