@@ -4,10 +4,10 @@ This is the repo for the website for [ZBrownDistillery.com](http://zbrowndistill
 ### CSS & Pre-Processors
 * bootstrap
 * normalize.css
-* SASS
+* sass/scss
 ### JavaScript/Node
 * jquery
 * underscore
-* Gulp
-* Nunjucks
-* Sundry other libraries
+* gulp
+* nunjucks
+* sundry other libraries
