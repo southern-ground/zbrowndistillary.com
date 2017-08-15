@@ -35,10 +35,9 @@ var manageEnvironment = function(environment) {
             s4() + '-' + s4() + s4() + s4();
     });
     environment.addGlobal('gitRev', function(){
-        return "\n\t\t*** Revision Information ***\n"+
-            "\t\tCommit: " + gitRev.long() + "\n" +
-            "\t\tDate: " + gitRev.date() + "\n" +
-            "\t\tMessage: " + gitRev.message() + "\n\t\t";
+        return "\tCommit: " + gitRev.long() + "\n" +
+            "\tDate: " + gitRev.date() + "\n" +
+            "\tMessage: " + gitRev.message() + "\n\t\t";
     });
     environment.addGlobal('localizedCdn', function(){
         if(env==="stage"){
