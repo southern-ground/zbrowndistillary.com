@@ -3,23 +3,53 @@
 html {
   body {
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 60px;
+      position: relative;
       width: 100%;
-      z-index: 10;
-      nav.headerNav {
+      max-width: $xl;
+      nav {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        -webkit-transition: background-color 2s, padding-bottom 2s; /* Safari */
-        transition: background-color 2s, padding-bottom 2s;
+        right: 0;
+        top: 50px;
+        .headerMenu__choices {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-content: center;
+          align-items: center;
+          list-style: none;
+          padding: 0;
+          li {
+            .headerMenu__choice {
+              display: block;
+              height: 27px;
+              width: 29px;
+              background-repeat: no-repeat;
+              margin: 0 0 0 20px;
+              background-image: url('../img/social.png');
+              text-indent: -9999px;
+              &--facebook {
+                background-position-x: -27px
+              }
+              &--instagram {
+                background-position-x: 0px;
+              }
+              &--twitter {
+                background-position-x: -58px;
+              }
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: 1044px) {
+        nav {
+          right: 10px;
+        }
+      }
+      @media only screen and (max-width: 749px) {
+        nav {
+          top: 10px;
+          right: 10px;
+        }
       }
     }
   }

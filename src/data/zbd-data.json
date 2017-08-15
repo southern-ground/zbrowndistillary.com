@@ -6,8 +6,8 @@
     "stage": "http://stage.zbrowndistillery.com.s3-website-us-east-1.amazonaws.com"
   },
   "sections": {
-    "tagline":{
-      "copy": "Georgia Born, American Made"
+    "header":{
+      "headerNavItems":["facebook", "twitter", "instagram"]
     },
     "description": {
       "img": "img/zac.png",

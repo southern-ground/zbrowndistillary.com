@@ -1,42 +1,119 @@
 @import "_shared";
 
 footer {
+  padding: 35px 0 0 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  font-size: 0.8rem;
   line-height: 20px;
-  .footer {
-    &__container {
-      font-weight: bold;
-      text-transform: uppercase;
-      .footer-sections{
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  .footer__ {
+    &logo {
+      flex-basis: 25%;
+      &__image {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &location {
+      text-align: center;
+      flex-basis: 50%;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      address {
+        display: inline-block;
+        margin: 0 0 0 20px;
+      }
+    }
+    &social {
+      flex-basis: 25%;
+      .footer__social__list {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        .footer-section{
-          flex-basis: 33%;
-          text-align: center;
-          h3{
-            font-family: "Times New Roman",Serif;
-            font-size: 16px;
-            font-style: italic;
-            letter-spacing: 1px;
-            text-transform: none;
-            color: $orange;
-            text-align: inherit;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .orange{
+          padding: 0 20px 0 0;
+        }
+        &__item {
+          &:not(:nth-child(2)):not(:last-of-type){
+            padding: 0 20px;
           }
-          address{
-            font-weight: normal;
-            font-size: 11px;
+          .footer__social__choice {
+            display: block;
+            height: 27px;
+            width: 29px;
+            background-repeat: no-repeat;
+            background-image: url('../img/social.png');
+            text-indent: -9999px;
+            &--facebook {
+              background-position-x: -27px
+            }
+            &--instagram {
+              background-position-x: 0px;
+            }
+            &--twitter {
+              background-position-x: -58px;
+            }
 
           }
         }
       }
-      @include media-desktop {
-        max-width: $desktop;
-        margin: 0 auto;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    .footer__social > ul > li:nth-child(2) > a{
+      height: 200px;
+      weight: 300px;
+    }
+    .footer__logo {
+      padding: 0 0 0 20px;
+    }
+    .footer__location{
+      span.orange{
+        display: none;
       }
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      margin: 20px 0;
+    }
+    .footer__social {
+
+      li.orange{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    .footer__logo, .footer__social {
+      padding: 0;
+    }
+    .footer__location {
+      padding: 20px 0;
+    }
+    .footer__social .footer__social__list__item .footer__social__choice {
+      margin: 0;
+    }
+    .footer__social .footer__social__list__item .footer__social__choice--twitter {
+      margin: 0 20px;
     }
   }
 }

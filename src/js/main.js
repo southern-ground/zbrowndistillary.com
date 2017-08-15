@@ -1,35 +1,17 @@
 var zbd = window.zbd = {
-    _: window._,
-    isMobile: null,
-    lazyLoad: null,
-    foldHeight: window.innerHeight,
-    $container: null,
-    checkFold: function () {
-        var $w = $(window),
-            top = $w.scrollTop();
-        if (top === 0 && !zbd.isMobile) {
-            // Not on mobile; at the top.
-        }
-        if (top > zbd.foldHeight) {
-            // Below the fold:
-            $('body').addClass('below-the-fold');
-        } else {
-            // Above the fold:
-            $('body').removeClass('below-the-fold');
-        }
-    },
     init: function () {
-        zbd.isMobile = mobileAndTabletcheck();
-        zbd.$container = $('#content');
-        $('body').addClass(zbd.isMobile ? "is-mobile" : "not-mobile");
-        $(window).scroll(function () {
-            zbd.checkFold();
-        });
-        zbd.checkFold();
         $(window).resize(function () {
-            zbd.foldHeight = window.innerHeight;
+            zbd.resize();
         });
-        zbd.lazyLoad = new LazyLoad();
+        this.resize();
+    },
+    resize: function(){
+        var h = $('#Mid').innerHeight(),
+            offset = (h - 300)/2;
+        $('#MidBackground').css({
+            top: offset,
+            height: h/2
+        });
     }
 };
 
