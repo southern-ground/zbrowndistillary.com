@@ -95,6 +95,13 @@ gulp.task('copy:images', function (done) {
         .pipe(gulp.dest(dirs.dist + "/img/"));
 });
 
+gulp.task('copy:favicons', function (done) {
+    return gulp.src([dirs.src + "/*.png", dirs.src + "/*.ico"], {
+        dot: false
+    })
+        .pipe(gulp.dest(dirs.dist));
+});
+
 gulp.task('copy:js', function (done) {
     return gulp.src([dirs.src + "/js/**/*.js"], {
         dot: false
@@ -138,7 +145,8 @@ gulp.task('copy', function (done) {
         'copy:fonts',
         'copy:cssFonts',
         'copy:docs',
-        'copy:video'
+        'copy:video',
+        'copy:favicons'
     ], done);
 });
 
