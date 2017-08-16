@@ -19,7 +19,14 @@
       },
       "location": {
         "headline": "Location",
-        "address": "<address>2148 Town Creek Church Road<br />Dahlongega, GA 30533</address>"
+        "address": {
+          "street": "2148 Town Creek Church Road",
+          "city": "Dahlongega",
+          "state": "GA",
+          "zip": "30533"
+        },
+        "phone": "1-770-555-1212",
+        "email": "info@zbrowndistillery.com"
       }
     }
   },
