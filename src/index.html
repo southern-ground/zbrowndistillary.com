@@ -134,23 +134,32 @@
                 <img class="description-spacer" src="{{localizedCdn()}}/img/spacer.png"/>
             </div>
         </div>
-
         <ul class="photo-list">
             <li class="photo-list-item"><img src="{{localizedCdn()}}/img/description-00.jpg"/></li>
             <li class="photo-list-item"><img src="{{localizedCdn()}}/img/description-01.jpg"/></li>
             <li class="photo-list-item"><img src="{{localizedCdn()}}/img/description-02.jpg"/></li>
         </ul>
     </div>
-
 </section>
 <footer class="content">
-
     <div class="footer__logo">
         <img class="footer__logo__image" src="{{localizedCdn()}}/img/footer-logo.png"/>
     </div>
     <div class="footer__location">
-        <span class="orange">Location:</span>
-        <address>2148 Town Creek Church Rd, Dahlonega, GA 30533</address>
+        <div class="address">
+            <span class="orange">Location:&nbsp;</span> <address>
+                <span class="street">{{sections.footer.location.address.street}}</span>
+                {{sections.footer.location.address.city}}, {{sections.footer.location.address.state}} {{sections.footer.location.address.zip}}
+            </address>
+        </div>
+        <div class="location-group">
+            <div class="location-group-item phone">
+                <span class="orange">Phone:&nbsp;</span> <a href="tel:{{sections.footer.location.phone}}">{{sections.footer.location.phone}}</a>
+            </div>
+            <div class="location-group-item email">
+                <span class="orange">Email:&nbsp;</span> <a href="mailto:{{sections.footer.location.email}}">{{sections.footer.location.email}}</a>
+            </div>
+        </div>
     </div>
     <div class="footer__social">
         <ul class="footer__social__list">
@@ -162,7 +171,6 @@
             {% endfor %}
         </ul>
     </div>
-
 </footer>
 
 <div id="overlay" style="display:none;">
