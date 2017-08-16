@@ -27,7 +27,7 @@
     }
   },
   "social": {
-    "socialMediaImage": "http://tbd",
+    "socialMediaImage": "/social.jpg",
     "platformUrls": {
       "facebook": "https://facebook.com",
       "instagram": "https://instagram.com",
