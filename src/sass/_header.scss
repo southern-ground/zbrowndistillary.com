@@ -4,12 +4,19 @@ html {
   body {
     header {
       position: relative;
+      display: block;
       width: 100%;
       max-width: $xl;
+      margin: 0 auto;
+      z-index: 1;
       nav {
         position: absolute;
-        right: 0;
-        top: 50px;
+        top: 10px;
+        right: 10px;
+        @include media-desktop{
+          top: 56px;
+          right: 86px;
+        }
         .headerMenu__choices {
           display: flex;
           flex-direction: row;
@@ -38,17 +45,6 @@ html {
               }
             }
           }
-        }
-      }
-      @media only screen and (max-width: 1044px) {
-        nav {
-          right: 10px;
-        }
-      }
-      @media only screen and (max-width: 749px) {
-        nav {
-          top: 10px;
-          right: 10px;
         }
       }
     }

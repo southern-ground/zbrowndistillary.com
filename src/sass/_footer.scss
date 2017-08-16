@@ -8,10 +8,19 @@ footer {
   line-height: 20px;
   border-top: 2px solid white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  .orange {
+    display: none;
+  }
+  @include media-desktop {
+    flex-direction: row;
+    .orange{
+      display: inline;
+    }
+  }
   .footer__ {
     &logo {
       flex-basis: 25%;
@@ -19,15 +28,83 @@ footer {
         display: block;
         margin: 0 auto;
       }
+      padding: 0 0 40px 0;
+      @include media-desktop {
+        padding: 0 20px 0 0;
+      }
+      @include media-xl {
+        padding: 0;
+      }
     }
     &location {
       text-align: center;
       flex-basis: 50%;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
-      address {
-        display: inline-block;
-        margin: 0 0 0 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 40px 0;
+      @include media-desktop {
+        padding: 0;
+      }
+      .address {
+        flex-basis: 100%;
+        address {
+          height: auto;
+          display: inline-block;
+          margin-bottom: auto;
+          font-style: normal;
+          line-height: inherit;
+        }
+        .street {
+          display: block;
+          @include media-mobile {
+            display: inline;
+          }
+        }
+      }
+      .location-group {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        justify-content: center;
+        .location-group-item {
+          display: inline-block;
+          margin: 0;
+          padding: 10px 0 0;
+          @include media-desktop{
+            padding: 0 10px;
+          }
+
+        }
+        .email {
+          a {
+            color: $ink;
+            text-decoration: none;
+            &:visited {
+              color: $ink;
+            }
+            &:active {
+              color: $ink;
+            }
+          }
+
+        }
+        @include media-desktop {
+          flex-direction: row;
+        }
+
+      }
+      a[href^="tel:"] {
+        color: $ink;
+        text-decoration: none;
+      }
+
+      @include media-desktop {
+        border-left: 1px solid white;
+        border-right: 1px solid white;
       }
     }
     &social {
@@ -41,13 +118,13 @@ footer {
         list-style: none;
         margin: 0;
         padding: 0;
-        .orange{
+        li:nth-child(3) {
+          margin: 0 20px;
+        }
+        .orange {
           padding: 0 20px 0 0;
         }
         &__item {
-          &:not(:nth-child(2)):not(:last-of-type){
-            padding: 0 20px;
-          }
           .footer__social__choice {
             display: block;
             height: 27px;
@@ -64,27 +141,31 @@ footer {
             &--twitter {
               background-position-x: -58px;
             }
-
           }
         }
       }
-
+      padding: 0 20px;
+      @include media-xl {
+        padding: 0;
+      }
     }
   }
+
 }
 
+/*
 @media only screen and (max-width: 1024px) {
   footer {
     flex-direction: column;
-    .footer__social > ul > li:nth-child(2) > a{
+    .footer__social > ul > li:nth-child(2) > a {
       height: 200px;
       weight: 300px;
     }
     .footer__logo {
       padding: 0 0 0 20px;
     }
-    .footer__location{
-      span.orange{
+    .footer__location {
+      span.orange {
         display: none;
       }
       border-left: 1px solid transparent;
@@ -93,7 +174,7 @@ footer {
     }
     .footer__social {
 
-      li.orange{
+      li.orange {
         display: none;
       }
     }
@@ -116,4 +197,4 @@ footer {
       margin: 0 20px;
     }
   }
-}
+}*/
