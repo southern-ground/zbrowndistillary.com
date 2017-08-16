@@ -74,7 +74,6 @@
 
 </head>
 <body>
-
 <!--[if lt IE 8]>
 <p class="browserupgrade">This website was build with modern browsers in mind. Please consider <a
         href="http://browsehappy.com/">upgrading
@@ -102,20 +101,19 @@
     }(document, 'script', 'facebook-jssdk'));
 </script>
 <!-- END FB SDK -->
-
+<header>
+    <nav id="headerMenu" class="headerMenu">
+        <ul class="headerMenu__choices">
+            {% for navItem in sections.header.headerNavItems %}
+            <li>
+                <a href="{{social.platformUrls[navItem]}}"
+                   class="headerMenu__choice headerMenu__choice--{{navItem}}">{{navItem}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
 <section class="top">
-    <header>
-        <nav id="headerMenu" class="headerMenu">
-            <ul class="headerMenu__choices">
-                {% for navItem in sections.header.headerNavItems %}
-                <li>
-                    <a href="{{social.platformUrls[navItem]}}"
-                       class="headerMenu__choice headerMenu__choice--{{navItem}}">{{navItem}}</a>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </header>
     <div class="logo-container">
         <img class="logo" src="{{localizedCdn()}}/img/zbrowndistillary-logo.png"/>
     </div>
