@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Z Brown Distillary</title>
+    <title>{{site.title}}</title>
 
-    <meta name="description" content="">
+    <meta name="description" content="{{site.description}}">
     <meta name="robots" content="all">
     <meta name="author"
-          content="">
-    <meta name="copyright" content="Copyright (c) {{getCurrentYear()}} Z Brown Distillary">
+          content="{{site.author}}">
+    <meta name="copyright" content="Copyright (c) {{getCurrentYear()}} {{site.title}}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
 
@@ -39,22 +39,22 @@
 
 
     <!-- for Facebook -->
-    <meta property="og:title" content="{{siteData.longSiteTitle}}"/>
+    <meta property="og:title" content="{{site.title}}"/>
     <meta property="og:type" content="profile"/>
-    <meta property="og:image" content="{{social.socialMediaImage}}"/>
+    <meta property="og:image" content="{{site.canonicalUrl}}{{social.socialMediaImage}}"/>
     <meta property="og:url" content="{{siteData.canonicalUrl}}"/>
     <meta property="og:description"
-          content=""/>
+          content="{{site.description}}"/>
 
     <!-- for Twitter -->
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="Southern Reel"/>
+    <meta name="twitter:title" content="{{site.title}}"/>
     <meta name="twitter:description"
-          content=""/>
-    <meta name="twitter:image" content="{{social.socialMediaImage}}"/>
+          content="{{site.description}}"/>
+    <meta name="twitter:image" content="{{site.canonicalUrl}}{{social.socialMediaImage}}"/>
 
     <!-- for Google -->
-    <link rel='author' href='https://plus.google.com/u/0/103429485426405859499/'/>
+    <link rel='author' href='{{site.authorId}}'/>
 
     <link rel="stylesheet" href="{{localizedCdn()}}/css/vendor/normalize.css">
     <link rel="stylesheet" href="{{localizedCdn()}}/css/vendor/bootstrap.min.css">

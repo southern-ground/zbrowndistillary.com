@@ -1,9 +1,19 @@
 {
-  "longSiteTitle": "Z Brown Distillary",
-  "canonicalUrl": "http://zbrowndistillary.com",
-  "cdn": {
-    "prod": "http://zbrowndistillery.com.s3-website-us-east-1.amazonaws.com",
-    "stage": "http://stage.zbrowndistillery.com.s3-website-us-east-1.amazonaws.com"
+  "site":{
+    "title":"Z Brown Distillery",
+    "description": "",
+    "author": "Ferris",
+    "authorId": "https://plus.google.com/u/0/103429485426405859499/",
+    "canonicalUrl": "http://zbrowndistillery.com",
+    "cdn": {
+      "prod": "http://zbrowndistillery.com.s3-website-us-east-1.amazonaws.com",
+      "stage": "http://stage.zbrowndistillery.com.s3-website-us-east-1.amazonaws.com"
+    },
+    "tracking":{
+      "google":{
+        "googleUA": "UA-54746522-12"
+      }
+    }
   },
   "sections": {
     "header":{
@@ -33,8 +43,5 @@
       "instagram": "https://instagram.com",
       "twitter": "https://twitter.com"
     }
-  },
-  "tracking": {
-    "googleUA": "UA-54746522-12"
   }
 }

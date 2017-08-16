@@ -41,11 +41,11 @@ var manageEnvironment = function(environment) {
     });
     environment.addGlobal('localizedCdn', function(){
         if(env==="stage"){
-            return siteData.cdn.stage;
+            return siteData.site.cdn.stage;
         }else if(env === "prod"){
-            return siteData.cdn.prod;
+            return siteData.site.cdn.prod;
         }
-        return "";
+        return ".";
     });
     environment.addGlobal('getCurrentYear', function(){
         return new Date().getFullYear();
