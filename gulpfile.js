@@ -37,7 +37,7 @@ var manageEnvironment = function(environment) {
     environment.addGlobal('gitRev', function(){
         return "\tCommit: " + gitRev.long() + "\n" +
             "\tDate: " + gitRev.date() + "\n" +
-            "\tMessage: " + gitRev.message() + "\n\t\t";
+            "\tPurpose of this commit: " + gitRev.message() + "\n\t\t";
     });
     environment.addGlobal('localizedCdn', function(){
         if(env==="stage"){
