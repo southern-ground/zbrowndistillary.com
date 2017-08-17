@@ -138,11 +138,15 @@
         </div>
     </div>
 </section>
+
 <section id="Mid" class="mid">
     <div class="content description">
         <!-- Description -->
         <div class="description-container">
-            <img class="zac mobile-only" src="{{localizedCdn()}}/img/zac.png"/>
+            <img class="zac mobile-only"
+                 src="{{localizedCdn()}}/img/zac.png"
+                 alt="{{sections.description.img_alt}}"
+                 title="{{sections.description.img_alt}}" />
             <div class="description-copy">
                 {{sections.description.copy | safe}}
                 <img class="description-spacer" src="{{localizedCdn()}}/img/spacer.png"/>
