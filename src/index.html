@@ -159,6 +159,7 @@
         </ul>
     </div>
 </section>
+
 <footer class="content">
     <div class="footer__logo">
         <img class="footer__logo__image"
@@ -168,10 +169,16 @@
     </div>
     <div class="footer__location">
         <div class="address">
-            <span class="orange">Location:&nbsp;</span> <address>
-                <span class="street">{{sections.footer.location.address.street}}</span>
-                {{sections.footer.location.address.city}}, {{sections.footer.location.address.state}} {{sections.footer.location.address.zip}}
-            </address>
+            <span class="orange">Location:&nbsp;</span>
+            <a href="{{sections.footer.location.map_url}}"
+               target="_blank"
+               title="Map of {{sections.footer.location.address.street}}, {{sections.footer.location.address.city}}, {{sections.footer.location.address.state}} {{sections.footer.location.address.zip}}">
+                <address>
+                    <span class="street">{{sections.footer.location.address.street}}</span>
+                    {{sections.footer.location.address.city}}, {{sections.footer.location.address.state}}
+                    {{sections.footer.location.address.zip}}
+                </address>
+            </a>
         </div>
         <div class="location-group">
             <div class="location-group-item phone">
