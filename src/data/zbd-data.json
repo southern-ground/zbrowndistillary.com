@@ -38,10 +38,19 @@
   },
   "social": {
     "socialMediaImage": "/social.jpg",
-    "platformUrls": {
-      "facebook": "https://facebook.com",
-      "instagram": "https://instagram.com",
-      "twitter": "https://twitter.com"
+    "platforms": {
+      "facebook": {
+        "name": "Facebook",
+        "url": "https://facebook.com"
+      },
+      "instagram": {
+        "name": "Instagram",
+        "url": "https://instagram.com"
+      },
+      "twitter": {
+        "name": "Twitter",
+        "url": "https://twitter.com"
+      }
     }
   }
 }
