@@ -31,7 +31,7 @@ html {
       background: transparent;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-content: center;
       align-items: center;
       position: relative;
@@ -56,7 +56,15 @@ html {
         .logo-container {
           display: flex;
           justify-content: center;
+          align-items: flex-start;
+          align-content: flex-start;
           margin: 65px 0 190px 0;
+          padding: 0 20px;
+          .logo{
+            width: 100%;
+            height: auto;
+            max-width: 392px;
+          }
         }
         .tagline-container {
           border-top: 2px solid white;
@@ -77,9 +85,18 @@ html {
           @media only screen and (max-width: 900px) {
             .tagline {
               flex-direction: column;
+              padding: 0 20px;
               img {
                 display: block;
                 margin: 0 0 10px;
+                width: 100%;
+                height: auto;
+              }
+              &--one{
+                max-width: 403px;
+              }
+              &--two{
+                max-width: 433px;
               }
             }
           }
@@ -92,80 +109,83 @@ html {
           }
         }
       }
-      &.mid {
-        .description {
-          z-index: 1;
+      &.mid{
+        .description{
           margin: 0 auto;
           .description-container {
-            background-image: url(../img/zac.png);
-            background-position: -64px -48px;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: flex-end;
-            align-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 60px 0 30px;
-            @include media-desktop{
-              padding: 60px 0 86px;
+            background-image: none;
+            height: auto;
+            flex-direction: column;
+            justify-content: flex-start;
+            .mobile-only {
+              display: block;
+            }
+            .description-copy {
+              flex-basis: 100%;
+              padding: 0 20px;
+              p{
+                padding: 0 20px;
+              }
             }
             .zac {
               width: 100%;
               max-width: 577px;
               height: auto;
+              display: block;
+              margin: 0 auto;
             }
-            .mobile-only {
-              display: none;
-            }
-
-            .description-copy {
-              flex-basis: 58%;
-              line-height: 28px;
-              font-size: 16.2px;
-              letter-spacing: 0.23px;
-              @media only screen and (max-width: 1120px) {
-                p {
-                  padding: 0 20px 40px 0;
-                }
-              }
-              .description-spacer {
-                display: block;
-                margin: 0 auto;
-                @include media-desktop{
-                  margin: 54px auto 0;
-                }
-              }
+            .description-spacer {
+              display: block;
+              margin: 0 auto;
+              padding: 20px 0;
             }
           }
-
-          @media only screen and (max-width: 900px) {
-            .description-container {
-              background-image: none;
-              height: auto;
-              flex-direction: column;
-              .mobile-only {
-                display: block;
+          @include media-tablet-portrait{
+            .description-container{
+              background-image: url(../img/zac.png);
+              background-position: -2.9vw -48px;
+              background-repeat: no-repeat;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-end;
+              align-content: center;
+              align-items: center;
+              width: 100%;
+              min-height: 340px;
+              margin: 0 0 40px;
+              .mobile-only{
+                display: none;
               }
               .description-copy {
-                flex-basis: 100%;
+                flex-basis: 56.5%;
+                line-height: 28px;
+                font-size: 16.2px;
+                letter-spacing: 0.23px;
                 p {
-                  padding: 40px;
+                  padding: 0 20px 0 0;
                 }
               }
             }
           }
-
+          @include media-large{
+            .description-container{
+              background-position: 30px -48px;
+            }
+          }
         }
         .photo-list {
           list-style: none;
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
           align-content: center;
           margin: 0;
           padding: 0;
+          @include media-desktop{
+            flex-direction: row;
+          }
           &-item {
             flex-basis: 33.3%;
             padding: 20px;
@@ -183,7 +203,6 @@ html {
         margin: 0;
       }
     }
-
     div#overlay {
       background-color: black;
       position: fixed;
