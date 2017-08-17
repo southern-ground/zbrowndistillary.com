@@ -15,6 +15,14 @@ html {
       font-family: 'Playfair Display', serif;
       color: $orange;
     }
+    .suppressed{
+      margin: 0;
+      padding: 0;
+      height: 0;
+      line-height: 0;
+      overflow:hidden;
+      text-indent: -9999px;
+    }
     &.no-scroll {
       overflow: hidden;
     }
