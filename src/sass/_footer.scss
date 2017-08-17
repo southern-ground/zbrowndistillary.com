@@ -52,12 +52,14 @@ footer {
       }
       .address {
         flex-basis: 100%;
-        address {
+        a > address {
           height: auto;
           display: inline-block;
           margin-bottom: auto;
           font-style: normal;
           line-height: inherit;
+          text-decocation: none;
+          color: $ink;
         }
         .street {
           display: block;
