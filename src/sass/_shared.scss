@@ -6,6 +6,7 @@ $ink: #ffffff;
 $orange: #dc9151;
 
 $xl: 1200px;
+$large: 1024px;
 $desktop: 980px;
 $tabPort: 768px;
 $sm: 767px;
@@ -13,6 +14,11 @@ $xs: 480px;
 
 @mixin media-xl(){
   @media only screen and (min-width: $xl){
+    @content;
+  }
+}
+@mixin media-large(){
+  @media only screen and (min-width: $large){
     @content;
   }
 }
