@@ -182,10 +182,18 @@
         </div>
         <div class="location-group">
             <div class="location-group-item phone">
-                <span class="orange">Phone:&nbsp;</span> <a href="tel:{{sections.footer.location.phone}}">{{sections.footer.location.phone}}</a>
+                <span class="orange">Phone:&nbsp;</span>
+                <a href="tel:{{sections.footer.location.phone}}"
+                   title="Phone the {{site.title}} on {{sections.footer.location.phone}}">
+                    {{sections.footer.location.phone}}
+                </a>
             </div>
             <div class="location-group-item email">
-                <span class="orange">Email:&nbsp;</span> <a href="mailto:{{sections.footer.location.email}}">{{sections.footer.location.email}}</a>
+                <span class="orange">Email:&nbsp;</span>
+                <a href="mailto:{{sections.footer.location.email}}"
+                   title="Email the {{site.title}} at {{sections.footer.location.email}}">
+                    {{sections.footer.location.email}}
+                </a>
             </div>
         </div>
     </div>
