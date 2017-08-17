@@ -9,7 +9,7 @@ footer {
   border-top: 2px solid white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-content: center;
   align-items: center;
   .orange {
@@ -17,19 +17,20 @@ footer {
   }
   @include media-desktop {
     flex-direction: row;
+    justify-content: space-between;
     .orange{
       display: inline;
     }
   }
   .footer__ {
     &logo {
-      flex-basis: 25%;
       &__image {
         display: block;
         margin: 0 auto;
       }
       padding: 0 0 40px 0;
       @include media-desktop {
+        flex-basis: 25%;
         padding: 0 20px 0 0;
       }
       @include media-xl {
@@ -38,7 +39,6 @@ footer {
     }
     &location {
       text-align: center;
-      flex-basis: 50%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -47,6 +47,7 @@ footer {
       justify-content: center;
       padding: 0 0 40px 0;
       @include media-desktop {
+        flex-basis: 50%;
         padding: 0;
       }
       .address {
@@ -108,7 +109,9 @@ footer {
       }
     }
     &social {
-      flex-basis: 25%;
+      @include media-desktop{
+        flex-basis: 25%;
+      }
       .footer__social__list {
         display: flex;
         flex-direction: row;
