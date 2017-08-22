@@ -102,6 +102,11 @@ gulp.task('copy:favicons', function (done) {
         .pipe(gulp.dest(dirs.dist));
 });
 
+gulp.task('copy:htaccess', function (done) {
+    return gulp.src([dirs.src + "/.htaccess"])
+        .pipe(gulp.dest(dirs.dist));
+});
+
 gulp.task('copy:js', function (done) {
     return gulp.src([dirs.src + "/js/**/*.js"], {
         dot: false
@@ -138,6 +143,20 @@ gulp.task('copy:video', function (done) {
 });
 
 gulp.task('copy', function (done) {
+    if(env==="prod"){
+        runSequence([
+            'copy:images',
+            'compress:js',
+            'copy:jsVendor',
+            'copy:fonts',
+            'copy:cssFonts',
+            'copy:docs',
+            'copy:video',
+            'copy:favicons',
+            'copy:htaccess'
+        ], done);
+        return;
+    }
     runSequence([
         'copy:images',
         'compress:js',
