@@ -1,7 +1,7 @@
 {
   "site":{
     "title":"Z. Brown Distillery",
-    "description": "",
+    "description": "Z. Brown Distillary is tucked into the foothills of the Appalachian Mountains and founded upon a deep-rooted respect for the long-standing, pre-prohibition traditions of making spirits in North Georgia and Appalachia. Z. Brown Distillary combines history, tradition and culture to create a truly American-made whiskey. For GRAMMY award-winning musician Zac Brown, of Zac Brown Band, te distillery is a return to his hometown.",
     "author": "Ferris",
     "authorId": "https://plus.google.com/u/0/103429485426405859499/",
     "canonicalUrl": "http://zbrowndistillery.com",
@@ -27,7 +27,7 @@
     "description": {
       "img": "img/zac.png",
       "img_alt": "Zac Brown",
-      "copy": "<p>Z. Brown Distillary is tucked into the foothills of the Appalachian Mountains and founded upon a deep-rooted respect for the long-standing, pre-prohibition traditions of making spirits in North Georgia and Appalachia. Z. Brown Distillary combinds history, tradition and culture to create a truly American-made whiskey. For GRAMMY award-winning musician Zac Brown, of Zac Brown Band, te distillery is a return to his hometown.</p>"
+      "copy": "<p>Z. Brown Distillary is tucked into the foothills of the Appalachian Mountains and founded upon a deep-rooted respect for the long-standing, pre-prohibition traditions of making spirits in North Georgia and Appalachia. Z. Brown Distillary combines history, tradition and culture to create a truly American-made whiskey. For GRAMMY award-winning musician Zac Brown, of Zac Brown Band, te distillery is a return to his hometown.</p>"
     },
     "footer": {
       "logo_alt": "Z. Brown Distillery, Dahlonega, Georgia",
