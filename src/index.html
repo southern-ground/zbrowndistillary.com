@@ -109,8 +109,9 @@
                 <a href="{{social.platforms[navItem].url}}"
                    class="headerMenu__choice headerMenu__choice--{{navItem}}"
                    alt="{{site.title}} on {{social.platforms[navItem].name}}"
-                   title="{{site.title}} on {{social.platforms[navItem].name}}"
-                >{{site.title}} on {{social.platforms[navItem].name}}</a>
+                   title="{{site.title}} on {{social.platforms[navItem].name}}">
+                    {{site.title}} on {{social.platforms[navItem].name}}
+                </a>
             </li>
             {% endfor %}
         </ul>
@@ -203,7 +204,7 @@
             {% for navItem in sections.header.headerNavItems %}
             <li class="footer__social__list__item">
                 <a class="footer__social__choice footer__social__choice--{{navItem}}"
-                   href="{{social.platformUrls[navItem]}}"
+                   href="{{social.platforms[navItem].url}}"
                    alt="{{site.title}} on {{social.platforms[navItem].name}}"
                    title="{{site.title}} on {{social.platforms[navItem].name}}">
                     {{site.title}} on {{social.platforms[navItem].name}}
