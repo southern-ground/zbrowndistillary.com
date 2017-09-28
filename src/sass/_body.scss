@@ -77,7 +77,7 @@ html {
         .tagline-container {
           border-top: 2px solid white;
           border-bottom: 2px solid white;
-          padding: 30px 0 38px;
+          padding: 30px 0 22px;
           z-index: 1;
           .tagline {
             display: flex;
@@ -113,6 +113,11 @@ html {
               img {
                 zoom: 0.85;
               }
+            }
+          }
+          @include media-large{
+            .tagline--two{
+              margin-left: 6px;
             }
           }
         }
@@ -165,11 +170,12 @@ html {
                 display: none;
               }
               .description-copy {
-                flex-basis: 44.5%;
+                flex-basis: 54%;
                 line-height: 28px;
                 font-size: 16.2px;
                 letter-spacing: 0.23px;
                 p {
+                  text-align: center;
                   padding: 0 20px 0 0;
                 }
               }
@@ -177,7 +183,8 @@ html {
           }
           @include media-large{
             .description-container{
-              background-position: 20px -48px;
+              min-height:422px;
+              background-position: 20px 0;
             }
           }
 

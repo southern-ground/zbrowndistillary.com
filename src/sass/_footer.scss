@@ -30,7 +30,7 @@ footer {
       }
       padding: 0 0 40px 0;
       @include media-desktop {
-        flex-basis: 25%;
+        flex-basis: 33%;
         padding: 0 20px 0 0;
       }
       @include media-xl {
@@ -47,7 +47,7 @@ footer {
       justify-content: center;
       padding: 0 0 40px 0;
       @include media-desktop {
-        flex-basis: 50%;
+        flex-basis: 33%;
         padding: 0;
       }
       .address {
@@ -106,18 +106,19 @@ footer {
       }
 
       @include media-desktop {
-        border-left: 1px solid white;
         border-right: 1px solid white;
+        min-height:40px;
       }
+
     }
     &social {
       @include media-desktop{
-        flex-basis: 25%;
+        flex-basis: 33%;
       }
       .footer__social__list {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         align-content: center;
         align-items: center;
         list-style: none;
@@ -150,6 +151,10 @@ footer {
         }
       }
       padding: 0 20px;
+      @include media-desktop {
+        border-left: 1px solid white;
+        min-height:40px;
+      }
       @include media-xl {
         padding: 0;
       }
