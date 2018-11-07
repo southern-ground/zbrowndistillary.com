@@ -127,100 +127,21 @@
              title="{{sections.top.logo_alt}}"
         />
     </div>
-    <div class="content tagline-container">
-        <div class="tagline">
-            <img class="tagline--one"
-                 src="{{localizedCdn()}}/img/georgia-born.png"
-                 alt="{{sections.top.tagline_one_alt}}"
-                 title="{{sections.top.tagline_one_alt}}"/>
-            <img class="tagline--two"
-                 src="{{localizedCdn()}}/img/american-made.png"
-                 alt="{{sections.top.tagline_two_alt}}"
-                 title="{{sections.top.tagline_two_alt}}"/>
-        </div>
-    </div>
 </section>
 
 <section id="Mid" class="mid">
     <div class="content description">
         <!-- Description -->
         <div class="description-container">
-            <img class="zac mobile-only"
-                 src="{{localizedCdn()}}/img/zac.png"
-                 alt="{{sections.description.img_alt}}"
-                 title="{{sections.description.img_alt}}" />
-            <div class="description-copy">
-                {{sections.description.copy | safe}}
-                <img class="description-spacer" src="{{localizedCdn()}}/img/spacer.png"/>
-            </div>
+            <p>Z. Brown Distillery would like to take this opportunity to thank everyone in Lumpkin County as well as
+                the city of Dahlonega, GA for being a welcoming and supportive community. To all of our patrons,
+                visitors, friends and neighbors we've met here, we extend a bitter sweet '"see you later" as we close
+                the doors on Nov. 18th. Although the Distillery is closing down, we as Southern Ground are excited to
+                see you again just down the road at our restaurant, Zac Brown's Social Club, in the newly renovated
+                State Farm Arena in downtown Atlanta. THANK YOU.</p>
         </div>
-        <ul class="photo-list">
-            <li class="photo-list-item"><img src="{{localizedCdn()}}/img/description-00.jpg"/></li>
-            <li class="photo-list-item"><img src="{{localizedCdn()}}/img/description-01.jpg"/></li>
-            <li class="photo-list-item"><img src="{{localizedCdn()}}/img/description-02.jpg"/></li>
-        </ul>
     </div>
 </section>
-
-<footer class="content">
-    <div class="footer__location">
-        <!--<div class="address">
-            <span class="orange">Location:&nbsp;</span>
-            <a href="#REDACTED"
-               target="_blank"
-               title="Map of <REDACTED>, <REDACTED>, <REDACTED> <REDACTED>">
-                <address>
-                    <span class="street"><REDACTED></span>
-                    <REDACTED>, <REDACTED>
-                    <REDACTED>
-                </address>
-            </a>
-        </div>-->
-        <div class="location-group">
-            <!--<div class="location-group-item phone">
-                <span class="orange">Phone:&nbsp;</span>
-                <a href="tel:<REDACTED>"
-                   title="Phone the {{site.title}} on <REDACTED>">
-                    <REDACTED>
-                </a>
-            </div>-->
-            <div class="location-group-item email">
-                <span class="orange">Email:&nbsp;</span>
-                <a href="mailto:{{sections.footer.location.email}}"
-                   title="Email the {{site.title}} at {{sections.footer.location.email}}">
-                    {{sections.footer.location.email}}
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer__logo">
-        <img class="footer__logo__image"
-             src="{{localizedCdn()}}/img/footer-logo.png"
-             alt="{{sections.footer.logo_alt}}"
-             title="{{sections.footer.logo_alt}}" />
-    </div>
-    <div class="footer__social">
-        <ul class="footer__social__list">
-            <li class="orange">Social:</li>
-            {% for navItem in sections.header.headerNavItems %}
-            <li class="footer__social__list__item">
-                <a class="footer__social__choice footer__social__choice--{{navItem}}"
-                   href="{{social.platforms[navItem].url}}"
-                   alt="{{site.title}} on {{social.platforms[navItem].name}}"
-                   title="{{site.title}} on {{social.platforms[navItem].name}}"
-                   target="_blank">
-                    {{site.title}} on {{social.platforms[navItem].name}}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</footer>
-
-<div id="overlay" style="display:none;">
-    <a id="overlayClose" href="#" class="overlay__close">Close</a>
-    <div id="overlayContent"></div>
-</div>
 
 <script src="{{localizedCdn()}}/js/vendor/underscore-min.js"></script>
 <script src="{{localizedCdn()}}/js/vendor/jquery.min.js"></script>
@@ -228,13 +149,20 @@
 <script src="{{localizedCdn()}}/js/main.js?id={{guid()}}"></script>
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', '{{site.tracking.google.googleUA}}', 'auto');
-    ga('send', 'pageview');
+  ga('create', '{{site.tracking.google.googleUA}}', 'auto');
+  ga('send', 'pageview');
 
 </script>
 

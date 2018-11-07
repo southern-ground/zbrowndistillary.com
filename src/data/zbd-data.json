@@ -17,7 +17,7 @@
   },
   "sections": {
     "header":{
-      "headerNavItems":["facebook", "twitter", "instagram"]
+      "headerNavItems":[]
     },
     "top":{
       "logo_alt": "Z. Brown Distillery, Dahlonega, Georgia",
